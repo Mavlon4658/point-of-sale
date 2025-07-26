@@ -1,0 +1,54 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@font-face {
+    font-family: 'DrukLCGMedium';
+    src: url('../fonts/DrukLCG/DrukLCGMedium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DrukLCGWideMedium';
+    src: url('../fonts/DrukLCG/DrukWideLCG-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PP Neue Machina";
+    src: url('../fonts/PPNeueMachina/PPNeueMachina-Regular.otf');
+    font-weight: 400;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SignPainter HouseScript";
+    src: url('../fonts/SignPainterHouseScript/16397.otf');
+}
+
+$font-ubuntu: "Ubuntu", sans-serif;
+$font-bebas: "Bebas Neue", sans-serif;
+$font-atype-text: "AtypText", sans-serif;
+$font-atype-display: "AtypDisplay", sans-serif;
+$font-drukLCG: "DrukLCG", sans-serif;
+$font-DrukLCGWideMedium: "DrukLCGWideMedium", sans-serif;
+$font-DrukCry: "Druk Cyr", sans-serif;
+$font-PPNeueMachine: "PP Neue Machina", sans-serif;
+// Fonts end
+
+// Colors
+// Colors end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
