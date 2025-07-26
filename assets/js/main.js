@@ -17,16 +17,27 @@ if (phoneInp.length) {
 };
 
 const homeSwp = new Swiper('.home-bottom__swp .swiper', {
-    slidesPerView: 1.3,
+    slidesPerView: 1.2,
     loop: true,
     effect: "coverflow",
     centeredSlides: true,
     spaceBetween: 0,
     coverflowEffect: {
         rotate: 0,
-        stretch: 115,
-        depth: 90,
+        stretch: '14%',
+        depth: 80,
         modifier: 5
+    },
+    breakpoints: {
+        991: {
+            slidesPerView: 1.3,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: '12.1%',
+                depth: 90,
+                modifier: 5
+            },
+        },
     },
     navigation: {
         nextEl: '.home-bottom__swp .swp-btn__next',
@@ -39,16 +50,27 @@ const homeSwp = new Swiper('.home-bottom__swp .swiper', {
 })
 
 const designSwp = new Swiper('.design-swp .swiper', {
-    slidesPerView: 1.3,
+    slidesPerView: 1.2,
     loop: true,
     effect: "coverflow",
     centeredSlides: true,
     spaceBetween: 0,
     coverflowEffect: {
         rotate: 0,
-        stretch: 115,
+        stretch: '13.4%',
         depth: 90,
         modifier: 5
+    },
+    breakpoints: {
+        991: {
+            slidesPerView: 1.3,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: '12.1%',
+                depth: 90,
+                modifier: 5
+            },
+        }
     },
     navigation: {
         nextEl: '.design-swp .swp-btn__next',
@@ -63,6 +85,7 @@ const designSwp = new Swiper('.design-swp .swiper', {
 const clientsSwp = new Swiper('.clients-swp .swiper', {
     slidesPerView: 1,
     spaceBetween: 37.25,
+    centeredSlides: true,
     breakpoints: {
         1280: {
             slidesPerView: 4,

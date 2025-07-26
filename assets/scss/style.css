@@ -149,7 +149,7 @@ button, input, textarea, li, div {
 
 .container {
   max-width: 1240px;
-  width: calc(100% - 59px);
+  width: calc(100% - 96px);
   margin: 0 auto;
   padding: 0;
 }
@@ -256,6 +256,11 @@ button, input, textarea, li, div {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .home-bg {
+    min-width: 100%;
+  }
 }
 .home-content {
   position: relative;
@@ -595,14 +600,59 @@ button, input, textarea, li, div {
 .home-bottom__swp button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - 20px));
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .home-bottom__swp button {
+    transform: translateY(calc(-50% - 10px));
+  }
+  .home-bottom__swp button svg {
+    width: 5.34px;
+  }
 }
 .home-bottom__swp .swp-btn__prev {
   left: -57px;
 }
+@media screen and (max-width: 1350px) {
+  .home-bottom__swp .swp-btn__prev {
+    left: -30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home-bottom__swp .swp-btn__prev {
+    left: 0;
+  }
+}
 .home-bottom__swp .swp-btn__next {
   right: -57px;
+}
+@media screen and (max-width: 1350px) {
+  .home-bottom__swp .swp-btn__next {
+    right: -30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home-bottom__swp .swp-btn__next {
+    right: 0;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .home-bottom__swp .swiper {
+    width: calc(100% - 22px);
+  }
+}
+.home-bottom__swp .swiper-slide {
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media screen and (max-width: 991px) {
+  .home-bottom__swp .swiper-slide {
+    border-radius: 9px;
+  }
+}
+.home-bottom__swp .swiper-slide img {
+  width: 100%;
 }
 .home-bottom__swp .swiper-slide-shadow-right,
 .home-bottom__swp .swiper-slide-shadow-left {
@@ -619,6 +669,12 @@ button, input, textarea, li, div {
   margin-top: 33px;
   gap: 11px;
 }
+@media screen and (max-width: 991px) {
+  .home-bottom__swp .swp-pagination {
+    gap: 3.19px;
+    margin-top: 10px;
+  }
+}
 .home-bottom__swp .swp-pagination span {
   width: 10px;
   height: 10px;
@@ -627,61 +683,15 @@ button, input, textarea, li, div {
   opacity: 1;
   background: rgba(255, 255, 255, 0.6);
 }
+@media screen and (max-width: 991px) {
+  .home-bottom__swp .swp-pagination span {
+    width: 2.9px;
+    height: 2.9px;
+  }
+}
 .home-bottom__swp .swp-pagination span.swiper-pagination-bullet-active {
   background: white;
 }
-.home-bottom__card {
-  position: relative;
-  z-index: -1;
-  border-radius: 30.9px;
-  overflow: hidden;
-  padding: 31px 0 59.5px;
-}
-.home-bottom__card .bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.home-bottom__card .icon {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-.home-bottom__card h3 {
-  font-family: "Druk Cyr", sans-serif;
-  font-weight: 500;
-  font-size: 111px;
-  line-height: 96%;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 26.68px;
-}
-.home-bottom__card ul {
-  gap: 23.64px;
-  padding-left: 98px;
-}
-.home-bottom__card ul p {
-  font-family: "DrukLCGWideMedium", sans-serif;
-  font-weight: 500;
-  font-size: 47px;
-  line-height: 114%;
-  margin-bottom: 3.32px;
-}
-.home-bottom__card ul span {
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 106%;
-}
-.home-bottom__card .main-img {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 3px 2px 0 rgba(0, 0, 0, 0.08), 0 5px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 7px 0 rgba(0, 0, 0, 0.12), 0 17px 13px 0 rgba(0, 0, 0, 0.15), 0 40px 32px 0 rgba(0, 0, 0, 0.18);
-  border-radius: 24px 0 0 24px;
-}
-
 .design {
   background: white;
   padding: 61px 0;
@@ -730,14 +740,42 @@ button, input, textarea, li, div {
 .design-swp button {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(calc(-50% - 20px));
   z-index: 2;
+}
+@media screen and (max-width: 991px) {
+  .design-swp button {
+    transform: translateY(calc(-50% - 10px));
+  }
+  .design-swp button svg {
+    width: 5.34px;
+  }
 }
 .design-swp .swp-btn__prev {
   left: -57px;
 }
+@media screen and (max-width: 1350px) {
+  .design-swp .swp-btn__prev {
+    left: -40px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .design-swp .swp-btn__prev {
+    left: 0;
+  }
+}
 .design-swp .swp-btn__next {
   right: -57px;
+}
+@media screen and (max-width: 1350px) {
+  .design-swp .swp-btn__next {
+    right: -40px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .design-swp .swp-btn__next {
+    right: 0;
+  }
 }
 .design-swp .swp-pagination {
   position: relative;
@@ -749,6 +787,12 @@ button, input, textarea, li, div {
   gap: 11px;
   margin-top: 43px;
 }
+@media screen and (max-width: 991px) {
+  .design-swp .swp-pagination {
+    margin-top: 10px;
+    gap: 3.19px;
+  }
+}
 .design-swp .swp-pagination span {
   opacity: 1;
   width: 10px;
@@ -757,17 +801,31 @@ button, input, textarea, li, div {
   padding: 0;
   background: rgba(21, 36, 56, 0.6);
 }
+@media screen and (max-width: 991px) {
+  .design-swp .swp-pagination span {
+    width: 2.9px;
+    height: 2.9px;
+  }
+}
 .design-swp .swp-pagination span.swiper-pagination-bullet-active {
   background: #152438;
 }
+@media screen and (max-width: 991px) {
+  .design-swp .swiper {
+    width: calc(100% - 22px);
+  }
+}
 .design-swp .swiper-slide {
-  height: 619px;
   border-radius: 30.9px;
   overflow: hidden;
 }
+@media screen and (max-width: 991px) {
+  .design-swp .swiper-slide {
+    border-radius: 9px;
+  }
+}
 .design-swp .swiper-slide img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1129,12 +1187,6 @@ button, input, textarea, li, div {
   justify-content: space-between;
   gap: 30px;
 }
-.clients-swp .swiper {
-  padding: 0 10px 10px;
-  width: calc(100% + 20px);
-  margin-bottom: -10px;
-  margin-left: -10px;
-}
 @media screen and (max-width: 1280px) {
   .clients-swp .swiper {
     width: calc(100% - 71px);
@@ -1322,6 +1374,7 @@ button, input, textarea, li, div {
 }
 .bonus-content__form-inp .form-inp {
   margin-bottom: 16px;
+  color: black;
 }
 @media screen and (max-width: 991px) {
   .bonus-content__form-inp .form-inp {
@@ -1389,6 +1442,11 @@ button, input, textarea, li, div {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+@media screen and (max-width: 991px) {
+  .footer-bg {
+    min-width: 100%;
+  }
 }
 .footer-title {
   font-weight: 400;

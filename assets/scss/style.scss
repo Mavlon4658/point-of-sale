@@ -57,7 +57,7 @@ button, input, textarea, li, div {
 
 .container {
     max-width: 1240px;
-    width: calc(100% - 59px);
+    width: calc(100% - 96px);
     margin: 0 auto;
     padding: 0;
 }
@@ -169,6 +169,10 @@ button, input, textarea, li, div {
         min-width: 1920px;
         object-fit: cover;
         z-index: -1;
+
+        @include media(991) {
+            min-width: 100%;
+        }
     }
 
     &-content {
@@ -509,18 +513,61 @@ button, input, textarea, li, div {
             button {
                 position: absolute;
                 top: 50%;
-                transform: translateY(-50%);
+                transform: translateY(calc(-50% - 20px));
                 z-index: 2;
+                
+                @include media(991) {
+                    transform: translateY(calc(-50% - 10px));
+
+                    svg {
+                        width: 5.34px;
+                    }
+                }
             }
 
             .swp-btn {
 
                 &__prev {
                     left: -57px;
+                    
+                    @include media(1350) {
+                        left: -30px;
+                    }
+                    
+                    @include media(991) {
+                        left: 0;
+                    }
                 }
 
                 &__next {
                     right: -57px;
+                    
+                    @include media(1350) {
+                        right: -30px;
+                    }
+                    
+                    @include media(991) {
+                        right: 0;
+                    }
+                }
+            }
+
+            .swiper {
+                @include media(1350) {
+                    width: calc(100% - 22px);
+                }
+
+                &-slide {
+                    border-radius: 30px;
+                    overflow: hidden;
+
+                    @include media(991) {
+                        border-radius: 9px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -540,6 +587,11 @@ button, input, textarea, li, div {
                 margin-top: 33px;
                 gap: 11px;
 
+                @include media(991) {
+                    gap: 3.19px;
+                    margin-top: 10px;
+                }
+
                 span {
                     width: 10px;
                     height: 10px;
@@ -547,6 +599,11 @@ button, input, textarea, li, div {
                     padding: 0;
                     opacity: 1;
                     background: rgba(255, 255, 255, 60%);
+
+                    @include media(991) {
+                        width: 2.9px;
+                        height: 2.9px;
+                    }
 
                     &.swiper-pagination-bullet-active {
                         background: white;
@@ -556,61 +613,64 @@ button, input, textarea, li, div {
         }
 
         &__card {
-            position: relative;
-            z-index: -1;
-            border-radius: 30.9px;
-            overflow: hidden;
-            padding: 31px 0 59.5px;
+            // position: relative;
+            // z-index: -1;
+            // overflow: hidden;
+            // padding: 31px 0 59.5px;
 
-            .bg-img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: -1;
-                object-fit: cover;
-            }
+            // .bg-img {
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 100%;
+            //     z-index: -1;
+            //     object-fit: cover;
+            // }
 
-            .icon {
-                position: absolute;
-                right: 0;
-                bottom: 0;
-            }
+            // .icon {
+            //     position: absolute;
+            //     right: 0;
+            //     bottom: 0;
+            // }
 
-            h3 {
-                font-family: $font-DrukCry;
-                font-weight: 500;
-                font-size: 111px;
-                line-height: 96%;
-                text-transform: uppercase;
-                text-align: center;
-                margin-bottom: 26.68px;
-            }
+            // h3 {
+            //     font-family: $font-DrukCry;
+            //     font-weight: 500;
+            //     font-size: 111px;
+            //     line-height: 96%;
+            //     text-transform: uppercase;
+            //     text-align: center;
+            //     margin-bottom: 26.68px;
 
-            ul {
-                gap: 23.64px;
-                padding-left: 98px;
+            //     @include media(991) {
+            //         font-size: 32px;
+            //     }
+            // }
 
-                p {
-                    font-family: $font-DrukLCGWideMedium;
-                    font-weight: 500;
-                    font-size: 47px;
-                    line-height: 114%;
-                    margin-bottom: 3.32px;
-                }
+            // ul {
+            //     gap: 23.64px;
+            //     padding-left: 98px;
 
-                span {
-                    font-weight: 600;
-                    font-size: 25px;
-                    line-height: 106%;
-                }
-            }
+            //     p {
+            //         font-family: $font-DrukLCGWideMedium;
+            //         font-weight: 500;
+            //         font-size: 47px;
+            //         line-height: 114%;
+            //         margin-bottom: 3.32px;
+            //     }
 
-            .main-img {
-                box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 3px 2px 0 rgba(0, 0, 0, 0.08), 0 5px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 7px 0 rgba(0, 0, 0, 0.12), 0 17px 13px 0 rgba(0, 0, 0, 0.15), 0 40px 32px 0 rgba(0, 0, 0, 0.18);
-                border-radius: 24px 0 0 24px;
-            }
+            //     span {
+            //         font-weight: 600;
+            //         font-size: 25px;
+            //         line-height: 106%;
+            //     }
+            // }
+
+            // .main-img {
+            //     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 3px 2px 0 rgba(0, 0, 0, 0.08), 0 5px 4px 0 rgba(0, 0, 0, 0.1), 0 9px 7px 0 rgba(0, 0, 0, 0.12), 0 17px 13px 0 rgba(0, 0, 0, 0.15), 0 40px 32px 0 rgba(0, 0, 0, 0.18);
+            //     border-radius: 24px 0 0 24px;
+            // }
         }
     }
 }
@@ -664,17 +724,41 @@ button, input, textarea, li, div {
         button {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(calc(-50% - 20px));
             z-index: 2;
+            
+            @include media(991) {
+                transform: translateY(calc(-50% - 10px));
+
+                svg {
+                    width: 5.34px;
+                }
+            }
         }
 
         .swp-btn {
             &__prev {
                 left: -57px;
+                
+                @include media(1350) {
+                    left: -40px;
+                }
+                
+                @include media(991) {
+                    left: 0;
+                }
             }
 
             &__next {
                 right: -57px;
+                
+                @include media(1350) {
+                    right: -40px;
+                }
+                
+                @include media(991) {
+                    right: 0;
+                }
             }
         }
 
@@ -688,6 +772,11 @@ button, input, textarea, li, div {
             gap: 11px;
             margin-top: 43px;
 
+            @include media(991) {
+                margin-top: 10px;
+                gap: 3.19px;
+            }
+
             span {
                 opacity: 1;
                 width: 10px;
@@ -696,6 +785,11 @@ button, input, textarea, li, div {
                 padding: 0;
                 background: rgba(21, 36, 56, 0.6);
 
+                @include media(991) {
+                    width: 2.9px;
+                    height: 2.9px;
+                }
+
                 &.swiper-pagination-bullet-active {
                     background: #152438;
                 }
@@ -703,14 +797,22 @@ button, input, textarea, li, div {
         }
 
         .swiper {
+            @include media(991) {
+                width: calc(100% - 22px);
+            }
+            
             &-slide {
-                height: 619px;
+                // height: 619px;
                 border-radius: 30.9px;
                 overflow: hidden;
 
+                @include media(991) {
+                    border-radius: 9px;
+                }
+
                 img {
                     width: 100%;
-                    height: 100%;
+                    // height: 100%;
                     object-fit: cover;
                 }
 
@@ -1082,10 +1184,6 @@ button, input, textarea, li, div {
         gap: 30px;
 
         .swiper {
-            padding: 0 10px 10px;
-            width: calc(100% + 20px);
-            margin-bottom: -10px;
-            margin-left: -10px;
 
             @include media(1280) {
                 width: calc(100% - 71px);
@@ -1277,6 +1375,7 @@ button, input, textarea, li, div {
 
                 .form-inp {
                     margin-bottom: 16px;
+                    color: black;
 
                     @include media(991) {
                         margin-bottom: 9px;
@@ -1347,6 +1446,10 @@ button, input, textarea, li, div {
         height: 100%;
         object-fit: cover;
         z-index: -1;
+
+        @include media(991) {
+            min-width: 100%;
+        }
     }
 
     &-title {
