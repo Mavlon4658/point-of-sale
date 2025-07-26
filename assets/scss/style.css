@@ -113,12 +113,14 @@ button, input, textarea, li, div {
   line-height: 121%;
   color: white;
   text-align: center;
+  padding: 0 20px;
 }
 @media screen and (max-width: 991px) {
   .form-inp {
     height: 26px;
     border-radius: 8px;
     font-size: 8px;
+    padding: 0 10px;
   }
 }
 .form-inp::-moz-placeholder {

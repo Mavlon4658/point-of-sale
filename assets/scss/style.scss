@@ -24,11 +24,13 @@ button, input, textarea, li, div {
         line-height: 121%;
         color: white;
         text-align: center;
+        padding: 0 20px;
 
         @include media(991) {
             height: 26px;
             border-radius: 8px;
             font-size: 8px;
+            padding: 0 10px;
         }
 
         &::placeholder {
